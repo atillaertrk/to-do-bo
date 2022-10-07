@@ -1,0 +1,15 @@
+<p class="h5 text-center">Taks</p>
+<div>
+  <ul class="list-group" *ngFor="let i of taskList">
+    <li
+      class="list-group-item my-2 bg-primary text-white d-flex justify-content-between"
+    >
+      <span>{{ i.task }}</span
+      ><span
+        >{{ i.date }}
+        
+      </span>
+      <span><span (click)="delete(i)" class="badge rounded-pill text-bg-danger close">X</span><span class="badge rounded-pill text-bg-success close" (click)="move(i)">✓</span></span>
+    </li>
+  </ul>
+</div>
